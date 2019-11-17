@@ -1,5 +1,10 @@
 # noroff-vueapp
 
+## Clone GitHub repository
+```
+git clone https://github.com/Ibento/noroff-vueapp
+cd noroff-vueapp
+```
 ## Project setup
 ```
 npm install
