@@ -24,7 +24,7 @@
                 recipes: []
             }
         },
-        created: function() {
+        beforeMount: function() {
             const app = this;
             
             const conversionURL = 'https://cors-anywhere.herokuapp.com/';
@@ -32,7 +32,9 @@
         
             fetch(conversionURL + url)
              .then(response => response.json())
-             .then(data => (app.recipes = data.results));
+             .then(function(result) {
+                app.recipes = result.results;
+             });
             
         }
     }
